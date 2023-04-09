@@ -1,0 +1,15 @@
+.app {
+    padding: 15px;
+
+    h1 {
+        color: #0ea293;
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .app {
+        width: 768px;
+        margin: auto;
+    }
+}

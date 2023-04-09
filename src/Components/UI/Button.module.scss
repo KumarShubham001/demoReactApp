@@ -1,0 +1,34 @@
+$danger: salmon;
+$dangerBackground: rgb(248, 228, 226);
+
+$success: #0ea293;
+$successBackground: #d9fffb;
+
+.button {
+    border: 0px;
+    height: 40px;
+    padding: 5px 30px;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.default {
+        background: $success;
+        color: white;
+    }
+
+    &.danger {
+        background-color: $danger;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .button {
+        width: auto;
+    }
+}

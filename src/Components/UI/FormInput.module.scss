@@ -1,0 +1,48 @@
+$dark: #0ea293;
+$light: #d9fffb;
+$extraDark: #05524a;
+
+$danger: salmon;
+$dangerBackground: rgb(248, 228, 226);
+
+$success: #0ea293;
+$successBackground: #d9fffb;
+
+.FormInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+
+    label {
+        font-size: 14px;
+        margin-bottom: 3px;
+        font-weight: normal;
+        text-transform: capitalize;
+        color: black;
+    }
+
+    input {
+        height: 30px;
+        padding: 0 5px;
+        border: 2px solid $dark;
+        background: $light;
+        border-radius: 1px;
+
+        &:focus {
+            outline: none;
+            border-color: $extraDark;
+        }
+    }
+
+    &.invalidField {
+        label {
+            color: $danger;
+        }
+
+        input {
+            border-color: $danger;
+            background-color: $dangerBackground;
+        }
+    }
+}

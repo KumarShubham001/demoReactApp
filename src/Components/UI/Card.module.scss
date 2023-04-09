@@ -1,0 +1,11 @@
+$dark: #0ea293;
+$light: #d9fffb;
+$extraDark: #05524a;
+
+.Card {
+    padding: 15px;
+    display: block;
+    box-shadow: 0 0 4px 0px $light;
+    margin-bottom: 15px;
+    background: linear-gradient(to bottom right, $dark, $light);
+}

@@ -1,0 +1,108 @@
+$dark: #0ea293;
+$light: #d9fffb;
+$extraDark: #05524a;
+
+$danger: salmon;
+$dangerBackground: rgb(248, 228, 226);
+
+$success: #0ea293;
+$successBackground: #d9fffb;
+
+.modal {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transition: display 4s ease-in-out 1s;
+
+    .modal__tint {
+        background: rgba(0, 0, 0, 0.8);
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .modal-container {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .modal-inner-container {
+            width: 350px;
+            min-height: 150px;
+            background: white;
+            box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+            display: block;
+            z-index: 999;
+
+            .modal-title {
+                padding: 15px;
+                h4 {
+                    margin: 0;
+                    font-size: 1.7em;
+                    color: $dark;
+                }
+            }
+            .modal-text {
+                padding: 15px;
+                p {
+                    margin: 0px;
+                    word-break: break-word;
+                }
+            }
+            .modal-footer {
+                padding: 15px;
+            }
+        }
+    }
+
+    &.visible {
+        display: block;
+    }
+
+    &.invisible {
+        display: none;
+    }
+
+    &.danger {
+        .modal-container {
+            .modal-inner-container {
+                .modal-title {
+                    h4 {
+                        color: $danger;
+                    }
+                }
+            }
+        }
+    }
+
+    &.default,
+    &.success {
+        .modal-container {
+            .modal-inner-container {
+                .modal-title {
+                    h4 {
+                        color: $success;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modal {
+        .modal-container {
+            .modal-inner-container {
+                width: 450px;
+            }
+        }
+    }
+}
